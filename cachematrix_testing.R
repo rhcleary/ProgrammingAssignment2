@@ -1,6 +1,6 @@
-## Program:     cachematrix.R
+## Program:     cachematrix_testing.R
 ## Date:        June 01, 2017
-## Programmer:  R. Cleary
+## Programmer:  Ryan Cleary
 ## Created for: Coursera R course Week 3 Assignment
 ##
 ## Purpose:     Create two functions, "makeCacheMatrix" and "cacheSolve" to 
@@ -31,7 +31,7 @@ makeCacheMatrix <- function(x = matrix()) {
 
 ## "cacheSolve" is a function to compute the inverse of the
 ## user defined matrix, based on the list created in "makeCacheMatrix" 
-## If the inverse has been previously calculated, "cacheSolve" function  
+## If the inverse has been previously calculated, "cacheSolve" function.  
 ## will retrieve the inverse from the cache.  
 ## Else "cacheSolve" will compute the inverse.
 
@@ -41,9 +41,8 @@ cacheSolve <- function(x, ...) {
                 message("getting cached data")
                 return(m)
         }
-        message("computing inverse of matrix")
         data <- x$get()
-        m <- solve(data, ...)
+        m <-- solve(data, ...)
         x$setinverse(m)
         m
 }
